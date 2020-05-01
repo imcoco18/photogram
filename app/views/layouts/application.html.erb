@@ -10,6 +10,30 @@
   </head>
 
   <body>
+    <div id="slidemenu">
+      <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomln fadeln fadelnUp fadeln">
+        <% if user_signed_in? %>
+          <li class="">
+           <%= link_to "",  %>
+          </li>
+          <li class="">
+            <%= link_to "",  %>
+          </li>
+          <li class="">
+            <%= link_to "",  %>
+          </li>
+        <% else %>
+          <li class="">
+            <%= link_to "",  %>
+          </li>
+          <li class="">
+            <%= link_to "",  %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
     <%= yield %>
+    
   </body>
 </html>

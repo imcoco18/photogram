@@ -14,20 +14,29 @@
       <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomln fadeln fadelnUp fadeln">
         <% if user_signed_in? %>
           <li class="">
-           <%= link_to "",  %>
+           <%= link_to root_path, "mypage" %>
           </li>
           <li class="">
-            <%= link_to "",  %>
+            <%= link_to root_path, "users" %>
           </li>
           <li class="">
-            <%= link_to "",  %>
+            <%= link_to root_path,"photoes" %>
+          </li>
+          <li class="">
+            <%= link_to root_path,"logout" %>
           </li>
         <% else %>
           <li class="">
-            <%= link_to "",  %>
+            <%= link_to root_path,"home" %>
           </li>
           <li class="">
-            <%= link_to "",  %>
+            <%= link_to root_path,"about" %>
+          </li>
+          <li class="">
+            <%= link_to root_path,"signin" %>
+          </li>
+          <li class="">
+            <%= link_to root_path,"login" %>
           </li>
         <% end %>
       </ul>

@@ -10,38 +10,40 @@
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
     <div id="slidemenu">
       <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomln fadeln fadelnUp fadeln">
         <% if user_signed_in? %>
           <li class="">
-           <%= link_to root_path, "mypage" %>
+           <%= link_to "mypage", root_path %>
           </li>
           <li class="">
-            <%= link_to root_path, "users" %>
+            <%= link_to "users", root_path %>
           </li>
           <li class="">
-            <%= link_to root_path,"photoes" %>
+            <%= link_to "photoes", root_path %>
           </li>
           <li class="">
-            <%= link_to root_path,"logout" %>
+            <%= link_to "logout", root_path %>
           </li>
         <% else %>
           <li class="">
-            <%= link_to root_path,"home" %>
+            <%= link_to "home", root_path %>
           </li>
           <li class="">
-            <%= link_to root_path,"about" %>
+            <%= link_to "about", homes_about_path%>
           </li>
           <li class="">
-            <%= link_to root_path,"signin" %>
+            <%= link_to "signup", new_user_registration_path %>
           </li>
           <li class="">
-            <%= link_to root_path,"login" %>
+            <%= link_to "login", new_user_session_path %>
           </li>
         <% end %>
       </ul>
     </div>
-
+  </header>
+  
     <%= yield %>
     
   </body>

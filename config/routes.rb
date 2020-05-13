@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
   root 'homes#index'
   get 'homes/about'
-  devise_for :users #URLとしてusersを含むことを示す
+
+  #URLとしてusersを含むことを示す  #コントラーラのカスタマイズが反映される
+  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
+
   resources :post_images, only: [:new, :create, :index, :show]
 
 
